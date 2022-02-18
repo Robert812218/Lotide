@@ -1,13 +1,15 @@
+// const eqArrays = require('./eqArrays');
+
 const assertEqual = function(actual, expected) {
   const emoji = require('node-emoji');
   const go = emoji.get("white_check_mark");
   const nicht = emoji.get("question");
 
   if (actual === expected) {
-    // console.log(`${go}${go}${go} Assertion Passed: ${actual} === ${expected}`);
+    console.log(`${go}${go}${go} Assertion Passed: ${actual} === ${expected}`);
     return true;
   } else if (actual !== expected) {
-    // console.log(`${nicht}${nicht}${nicht} Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`${nicht}${nicht}${nicht} Assertion Failed: ${actual} !== ${expected}`);
     return false;
   }
 };
@@ -33,5 +35,4 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-console.log(assertArraysEqual([5, 5, 2], [5, 5, 2]), true);
-console.log(assertArraysEqual([4, 3, 2], [4, 3, 1]), false);
+module.exports = assertArraysEqual;
