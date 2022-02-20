@@ -1,3 +1,5 @@
+const flatten = require('./flatten');
+
 const without = function(source, itemsToRemove) {
   let arr = [];
 
@@ -16,7 +18,7 @@ const without = function(source, itemsToRemove) {
     }
   }
   
-  return arr;
+  return flatten(arr);
 }
 
 console.log(without([1, 2, 3], [1]));
