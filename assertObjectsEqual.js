@@ -1,3 +1,4 @@
+// imports functions
 const check = require('check-node-version');
 const assertEqual = require('./assertEqual');
 const eqArrays = require('./eqArrays');
@@ -10,6 +11,7 @@ const assertObjectsEqual = function(object1, object2) {
   let kArr2 = [];
   let vArr2 = [];
 
+  // Object.entries separates the two input objects into arrays
   for (const [key, value] of Object.entries(object1)) {
     kArr1.push(key);
     vArr1.push(value);
@@ -30,6 +32,7 @@ const assertObjectsEqual = function(object1, object2) {
     return false;
   }
 
+  // compares each element of the keys arrays
   const checkKeys = function(k1, k2) {
     for (let i = 0; i < k1.length; i++) {
       if ((k1[i].length !== k2[i].length) || (!eqArrays(k1[i], k2[i]))) {
@@ -39,6 +42,7 @@ const assertObjectsEqual = function(object1, object2) {
     return true;
   }
 
+  // compares each element of the values arrays
   const checkVals = function(v1, v2) {
     for (let j = 0; j < v1.length; j++) {
       if ((v1[j].length !== v2[j].length) || (!eqArrays(v1[j], v2[j]))) {
