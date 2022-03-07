@@ -9,7 +9,7 @@ const reverse = (inp) => {
         str += unit[j];
       }
     console.log(str);
-    return str;
+    // return str;
   }
 
   for (const i of inp) {
@@ -19,4 +19,5 @@ const reverse = (inp) => {
   return output;
 };
 
-console.log(reverse("torque gourlami el con constadado", 999));
+
+module.exports = reverse;
