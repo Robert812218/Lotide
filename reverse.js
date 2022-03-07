@@ -1,5 +1,3 @@
-const { fileURLToPath } = require("url");
-
 const reverse = (inp) => {
   let output = [];
 
@@ -9,7 +7,7 @@ const reverse = (inp) => {
         str += unit[j];
       }
     console.log(str);
-    // return str;
+    return str;
   }
 
   for (const i of inp) {
