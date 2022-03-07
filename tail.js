@@ -1,7 +1,11 @@
 const assertEqual = require('./assertEqual');
 
 const tail = function(arr) {
-  let output = arr.shift;
+  let mid = arr.reverse();
+  mid.pop();
+  let output = mid.reverse;
+  
+  // let output = arr.shift;
 
   if (arr.length <= 1) {
     return [];
