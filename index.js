@@ -10,13 +10,13 @@ const letterPositions = require('./letterPositions');
 const countOnly = require('./countOnly');
 
 module.exports = {
-  head: head,
-  tail: tail,
-  middle: middle,
-  eqArrays: eqArrays,
-  assertEqualTest: assertEqualTest,
-  eqObjects: eqObjects,
-  findKeyByValue: findKeyByValue,
-  letterPositions: letterPositions,
-  countOnly: countOnly
+  head,
+  tail,
+  middle,
+  eqArrays,
+  assertEqualTest,
+  eqObjects,
+  findKeyByValue,
+  letterPositions,
+  countOnly
 };

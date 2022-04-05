@@ -1,5 +1,3 @@
-const assertEqual = require("./assertEqual");
-
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
@@ -10,7 +8,7 @@ const countOnly = function(allItems, itemsToCount) {
         results[i] += 1;
       } else {
         results[i] = 1;
-      }         
+      }
     }
   }
   return results;

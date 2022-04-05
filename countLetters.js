@@ -10,6 +10,6 @@ const countLetters = (inp) => {
     }
   }
   return out;
-}
+};
 
 module.exports = countLetters;

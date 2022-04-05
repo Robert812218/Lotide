@@ -1,5 +1,3 @@
-const assertEqual = require("./assertEqual");
-
 const findKeyByValue = function(obj, val) {
   
   for (const i in obj) {
@@ -7,8 +5,8 @@ const findKeyByValue = function(obj, val) {
       console.log(`${obj[i]}: ${i}`);
       return i;
     }
-  }  
-}
+  }
+};
 
 module.exports = findKeyByValue;
 
