@@ -1,4 +1,3 @@
-const check = require("check-node-version");
 const eqArrays = require("./eqArrays");
 const assertArraysEqual = require("./assertArraysEqual");
 

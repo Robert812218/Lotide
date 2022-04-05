@@ -1,7 +1,4 @@
-const assertEqual = require('./assertEqual');
 const eqArrays = require('./eqArrays');
-const assertArraysEqual = require('./assertArraysEqual');
-
 
 const eqObjects = function(object1, object2) {
   let kArr1 = [];
@@ -12,7 +9,7 @@ const eqObjects = function(object1, object2) {
   for (const [key, value] of Object.entries(object1)) {
     kArr1.push(key);
     vArr1.push(value);
-  };
+  }
 
   for (const [key, value] of Object.entries(object2)) {
     kArr2.push(key);
@@ -35,7 +32,7 @@ const eqObjects = function(object1, object2) {
       }
     }
     return true;
-  }
+  };
 
   const checkVals = function(v1, v2) {
     for (let j = 0; j < v1.length; j++) {
@@ -44,7 +41,7 @@ const eqObjects = function(object1, object2) {
       }
     }
     return true;
-  }
+  };
 
   if (checkKeys(kArr1, kArr2) && checkVals(vArr1, vArr2)) {
     // console.log(`True: keys, \n${kArr1} \nVals:\n ${vArr2}`);
@@ -52,6 +49,6 @@ const eqObjects = function(object1, object2) {
   } else {
     return false;
   }
-}
+};
 
 module.exports = eqObjects;
